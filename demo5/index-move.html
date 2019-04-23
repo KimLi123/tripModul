@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>document</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+	
+	<!-- css files -->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+	<link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
+	<link rel="stylesheet" href="./css/style2.css">
+	<!-- //css files -->
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<!-- google fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+	<!-- //google fonts -->
+	
+</head>
+<body>
+
+<!-- //header -->
+<header>
+	<div class="container">
+		<!-- top header -->
+		<section class="row top_header pt-3">
+			<div class="col-lg-6 buttons ml-auto">
+				<ul class="social mt-lg-0 mt-3">
+					<li class="mr-sm-4 mr-1"><span class="fa mr-2 fa-envelope-open-o"></span> <a href="mailto:info@example.com">info@example.com</a> </li>
+					<li class="mr-1"><a href="#"><span class="fa fa-facebook"></span></a></li>
+					<li class="mr-1"><a href="#"><span class="fa fa-twitter"></span></a></li>
+					<li class="mr-1"><a href="#"><span class="fa fa-google-plus"></span></a></li>
+					<li class="mr-1"><a href="#"><span class="fa fa-linkedin"></span></a></li>
+				</ul>
+			</div>
+		</section>
+		<!-- top header -->
+		<!-- nav -->
+		<nav class="pt-2 d-lg-flex">
+			<div id="logo">
+				<h1> <a href="index-move.html"><span class="fa fa-globe"></span> 六人旅行网</a></h1>
+			</div>
+			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+			<input type="checkbox" id="drop" />
+			<ul class="menu mt-md-2 ml-auto">
+				<li class="mr-lg-4 mr-2 active"><a href="index-move.html">首页</a></li>
+				<li class="mr-lg-4 mr-2"><a href="#choose">定制行程</a></li>
+				<li class="mr-lg-4 mr-2"><a href="#about">度假别墅</a></li>
+				<li class="mr-lg-3 mr-2 p-0">
+					<!-- First Tier Drop Down -->
+					<label for="drop-2" class="toggle">目的地 <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+					<a href="#">目的地 <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+					<input type="checkbox" id="drop-2"/>
+					<ul class="inner-dropdown p-lg-3 p-0">
+						<li><a href="#team">Our Agents</a></li>
+						<li><a href="#pricing">Travel Packages</a></li>
+						<li><a href="#blog">News Blog</a></li>
+						<li><a href="#book">Book Now</a></li>
+					</ul>
+				</li>
+				<li class="mr-lg-4 mr-2"><a href="#contact">客户评价</a></li>
+				<li class=""><a href="#subscribe">商务考察</a></li>
+			</ul>
+		</nav>
+		<!-- //nav -->
+	</div>
+</header>
+<!-- //header -->
+		
+<!-- banner -->
+<section class="banner" id="home">
+	<div class="container">
+		<div class="banner-text">
+			<div class="slider-info">
+				<!-- <div class="w3layouts-text mt-lg-5">
+					<h2>Plan your Holiday Trip Now Exceptional Adventure</h2>
+					<p class="mt-3"> Aliquam sodales neque ullamcorper vestibulum consequat. Curabitur mauris justo, rutrum sit amet pulvinar et, rutrum mattis augue. In faucibus orci vitae nulla ipsum.</p>
+				</div> -->
+			</div>
+			<!-- To bottom button-->
+			<div class="thim-click-to-bottom mt-sm-5 mt-3 pt-lg-5">
+				<div class="rotate">
+					<a href="#choose" class="scroll">
+						<span class="fa fa-angle-double-down"></span>
+					</a>
+				</div>
+			</div>
+			<!-- //To bottom button-->
+		</div>
+	</div>
+</section>
+<!-- //banner -->
+
+<!-- why choose us -->
+<section class="choose py-5" id="choose">
+	<div class="container py-sm-3">
+		<h3 class="heading text-center mb-4">为什么 <span>选择我们</span></h3>
+		<div class="row text-center">
+			<div class="allOpacity animation col-lg-3 col-md-6 choose-icon mt-4 ">
+				<span class="fa fa-cogs" aria-hidden="true"></span>
+				<div class=" choose-grid">
+					<h4 class="mt-4">不和陌生人拼团</h4>
+					<!-- <p class="mt-2">不和陌生人拼团</p> -->
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 choose-icon mt-4 animation allOpacity">
+				<span class="fa fa-headphones" aria-hidden="true"></span>
+				<div class="choose-grid">
+					<h4 class="mt-4">零操心，何必自助</h4>
+					<!-- <p class="mt-2">Integer pulvinar leo idut viver feugiat. Pellentes que libero justo orci fermentum.</p> -->
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 choose-icon mt-4 allOpacity animation">
+				<span class="fa fa-calendar" aria-hidden="true"></span>
+				<div class="choose-grid">
+					<h4 class="mt-4">贴身管家，有问必答</h4>
+					<!-- <p class="mt-2">Integer pulvinar leo idut viver feugiat. Pellentes que libero justo orci fermentum.</p> -->
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 choose-icon mt-4 allOpacity animation">
+				<span class="fa fa-cubes" aria-hidden="true"></span>
+				<div class="choose-grid">
+					<h4 class="mt-4">独家资源，高性价比</h4>
+					<!-- <p class="mt-2">Integer pulvinar leo idut viver feugiat. Pellentes que libero justo orci fermentum.</p> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //why choose us -->
+
+<!-- About -->
+<section class="about py-5" id="about">
+	<div class="container py-3">
+		<div class="row about-grids">
+			<div class="col-lg-6 ">
+				<img src="images/ayi.jpg" alt="About Image" class="AboutImg-rightInto allOpacity img-fluid" />
+			</div>
+			<div class="col-lg-6 mt-lg-0 mt-3">
+				<h4 class="text-uppercase mt-4 mb-2 AboutImg-leftText allOpacity AboutImg-leftText1">日本京都4日赏樱之旅</h4>
+				<h6 class="allOpacity AboutImg-leftText AboutImg-leftText2">江女士|2019年04月</h6>
+				<h5 class="my-sm-4 my-2 AboutImg-leftText allOpacity AboutImg-leftText3"><span class="fa fa-plane"></span> 飞至目的地 $235 , <span class="fa fa-bed"></span> 酒店住宿 $25 </h5>
+				<p class="AboutImg-leftText allOpacity AboutImg-leftText4"> 
+					我们的下一站和我们的第一个全花樱花的场景是皇宫，我们在花园里度过了几个小时。这里有一些美丽的老樱桃树，花朵很棒，所以我们拍了大约一百多张照片，只是坐了一会儿，欣赏它们。这是我们第一次体验日本樱花季节的疯狂 - 因为有数百名其他人和我们一样，所有人看到盛开的樱花似乎都喜出望外！
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //About -->
+
+<!-- team -->
+<section class="team py-5" id="team">
+	<div class="w3_dot_info two py-3">
+		<div class="container">
+			<h3 class="heading text-center mb-4"> 旅行 <span>顾问</span></h3>
+			<div class="row w3pvt_team_grids">
+				<div class="col-lg-3 col-sm-6 person person1">
+					<div class="w3_team_grid all-phone">
+						<div class="w3_team_grid_figure trun-people-img">
+							<img src="images/liuna.jpg" alt=" " class="img-fluid" />
+							<div>
+								<h4>刘娜</h4>
+						<p >旅行顾问</p>
+						<p>澳大利亚、新西兰</p>
+							</div>							
+						</div>
+						<!-- 联系电话 -->						
+						<div class="peoPhone-style peoplePhone1">
+						<h4>顾问介绍</h4>
+						<!-- <p></p> -->
+						<hr>
+						<p>累计策划线路：1000+ 本人从事旅游业十年，一直本着服务至上的原则，认真对待每一位游客，工作让我结识了很多爱好旅游的朋友</p>
+					</div>
+						<!-- 联系电话 -->
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6 mt-sm-0 mt-4 person person2">
+					<div class="w3_team_grid all-phone">
+						<div class="w3_team_grid_figure trun-people-img">
+							<img src="images/wangli.jpg" alt=" " class="img-fluid" />
+							<h4>王丽</h4>
+						<p>旅行顾问</p>
+						<p>日本</p>
+						</div>
+						<div class="peoPhone-style peoplePhone1">
+						<h4>顾问介绍</h4>
+						<hr>
+						<p>我的人生目标就是：踏遍日本的每一寸土地，带上你，一起看春天花粉的樱花，夏天绚烂的烟火，秋天热烈的红叶，冬天松软的粉雪</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6 mt-lg-0 mt-4 person person3">
+					<div class="w3_team_grid all-phone">
+						<div class="w3_team_grid_figure trun-people-img">
+							<img src="images/xiaohan.jpg" alt=" " class="img-fluid" />
+							<h4>小寒</h4>
+						<p>旅行顾问</p>
+						<p>台湾</p>
+						</div>
+						<div class="peoPhone-style peoplePhone1">
+						<h4>顾问介绍</h4>
+						<!-- <p></p> -->
+						<hr>
+						<p>从事台湾定制游7年，每次踏上这片土地就像是再来一场爱人的约会！我能够完美结合您的意愿为您和家人定制完美的出行计划</p>
+					</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6 mt-lg-0 mt-4 person person4">
+					<div class="w3_team_grid all-phone">
+						<div class="w3_team_grid_figure trun-people-img">
+							<img src="images/wangmiaomiao.jpg" alt=" " class="img-fluid" />
+							<h4>王苗苗</h4>
+						<p>旅行顾问</p>
+						<p>欧洲</p>
+						</div>
+						<div class="peoPhone-style peoplePhone1">
+						<h4>顾问介绍</h4>
+						<!-- <p>Travel Agent</p> -->
+						<hr>
+						<p>从最初的济州岛再到游历欧洲各国，一路上看美丽的风景，品藏美味，让身心彻底放松，感受不一样的风土人情，从次便欲罢不能。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //team -->
+
+<!-- travel with us -->
+<section class="travel py-5" id="travel">
+	<div class="container py-md-5">
+		<h3 class="heading text-center mb-5"> 热门 <span>目的地</span></h3>
+		<div class="row travel-grids">
+			<div class="col-lg-3 col-sm-6">
+				<div class="special-info height-color">
+					<div class="item">
+						<div class="special-info-top">
+							<div class="special-star">
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+							</div>
+							<h4>迪拜</h4>
+						</div>
+						<div class="special-info-bottom">
+							<ul>
+								<li>6 <span>days</span></li>
+								<li>12 <span>Cities</span></li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
+				<div class="special-info special-info1 height-color">
+					<div class="item">
+						<div class="special-info-top">
+							<div class="special-star">
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star-half-o" aria-hidden="true"></span>
+							</div>
+							<h4>马尔代夫</h4>
+						</div>
+						<div class="special-info-bottom">
+							<ul>
+								<li>12 <span>days</span></li>
+								<li>25 <span>Cities</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 mt-lg-0 mt-sm-5 mt-4">
+				<div class="special-info special-info2 height-color">
+					<div class="item">
+						<div class="special-info-top">
+							<div class="special-star">
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+							</div>
+							<h4>日本</h4>
+						</div>
+						<div class="special-info-bottom">
+							<ul>
+								<li>18 <span>days</span></li>
+								<li>10 <span>Cities</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 mt-lg-0 mt-sm-5 mt-4">
+				<div class="special-info special-info3 height-color">
+					<div class="item">
+						<div class="special-info-top">
+							<div class="special-star">
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star-half-o" aria-hidden="true"></span>
+							</div>
+							<h4>新西兰</h4>
+						</div>
+						<div class="special-info-bottom">
+							<ul>
+								<li>30 <span>days</span></li>
+								<li>40 <span>Cities</span></li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 mt-sm-5 mt-4">
+				<div class="special-info special-info4 height-color">
+					<div class="item">
+						<div class="special-info-top">
+							<div class="special-star">
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+							</div>
+							<h4>西班牙</h4>
+						</div>
+						<div class="special-info-bottom">
+							<ul>
+								<li>6 <span>days</span></li>
+								<li>12 <span>Cities</span></li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 mt-sm-5 mt-4">
+				<div class="special-info special-info5 height-color">
+					<div class="item">
+						<div class="special-info-top">
+							<div class="special-star">
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star-half-o" aria-hidden="true"></span>
+							</div>
+							<h4>泰国</h4>
+						</div>
+						<div class="special-info-bottom">
+							<ul>
+								<li>12 <span>days</span></li>
+								<li>25 <span>Cities</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 mt-sm-5 mt-4">
+				<div class="special-info special-info6 height-color">
+					<div class="item">
+						<div class="special-info-top">
+							<div class="special-star">
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+							</div>
+							<h4>巴厘岛</h4>
+						</div>
+						<div class="special-info-bottom">
+							<ul>
+								<li>18 <span>days</span></li>
+								<li>10 <span>Cities</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 mt-sm-5 mt-4">
+				<div class="special-info special-info7 height-color">
+					<div class="item">
+						<div class="special-info-top">
+							<div class="special-star">
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star" aria-hidden="true"></span>
+								<span class="fa fa-star-half-o" aria-hidden="true"></span>
+							</div>
+							<h4>阿根廷</h4>
+						</div>
+						<div class="special-info-bottom">
+							<ul>
+								<li>30 <span>days</span></li>
+								<li>40 <span>Cities</span></li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //travel with us -->
+
+<!-- pricing plans -->
+<section class="pricing py-5" id="pricing">
+	<div class="container py-md-5">
+		<h3 class="heading text-center mb-5"> Travel <span>Packages</span></h3>
+		<div class="row pricing-grids">
+			<div class="col-lg-4 col-md-6 price mb-md-0 mb-sm-5 mb-4">
+				<div class="shadow">
+					<div class="pricing-grid mb-md-0 mb-sm-5 mb-4">
+						<div class="head"><h3>Weekly </h3></div>
+						<h4>06$</h4>
+						<p class="py-3 text-center">Lorem ipsum dolor sit amet consecuter adsiplining</p>
+						<p> <span class="fa fa-check" aria-hidden="true"></span> 05 Best Travel Places</p>
+						<p> <span class="fa fa-check" aria-hidden="true"></span> Best Tourism Guides</p>
+						<p> <span class="fa fa-check" aria-hidden="true"></span> Experienced Travel Agents</p>
+						<p> <span class="fa fa-check" aria-hidden="true"></span> 06 days Travel Trip</p>
+					</div>
+				</div>
+				<a href="#contact">Select Plan <span class="fa fa-angle-double-right"></span></a>
+			</div>
+			<div class="col-lg-4 col-md-6 price mb-lg-0 mb-sm-5 mb-4">
+				<div class="shadow">
+					<div class="pricing-grid pricing-active">
+						<div class="head"><h3>Monthly </h3></div>
+						<h4>24$</h4>
+						<p class="py-3 text-center">Lorem ipsum dolor sit amet consecuter adsiplining</p>
+						<p> <span class="fa fa-check" aria-hidden="true"></span> 05 Best Travel Places</p>
+						<p> <span class="fa fa-check" aria-hidden="true"></span> Best Tourism Guides</p>
+						<p> <span class="fa fa-check" aria-hidden="true"></span> Experienced Travel Agents</p>
+						<p> <span class="fa fa-check" aria-hidden="true"></span> 10 days Travel Trip</p>
+					</div>
+				</div>
+				<a href="#contact">Select Plan <span class="fa fa-angle-double-right"></span></a>
+			</div>
+			<div class="col-lg-4 col-md-6 price mb-sm-0 mb-4">
+				<div class="shadow">
+					<div class="pricing-grid">
+						<div class="head"><h3>Annually </h3></div>
+						<h4>36$</h4>
+						<p class="py-3 text-center">Lorem ipsum dolor sit amet consecuter adsiplining</p>
+						<p> <span class="fa fa-check" aria-hidden="true"></span> 05 Best Travel Places</p>
+						<p> <span class="fa fa-check" aria-hidden="true"></span> Best Tourism Guides</p>
+						<p> <span class="fa fa-check" aria-hidden="true"></span> Experienced Travel Agents</p>
+						<p> <span class="fa fa-check" aria-hidden="true"></span> 20 days Travel Trip</p>
+					</div>
+				</div>
+				<a href="#contact">Select Plan <span class="fa fa-angle-double-right"></span></a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //pricing plans -->
+
+
+<!--/Blog-Posts-->
+<section class="banner-bottom-w3layouts py-md-5 py-4" id="blog">
+	<div class="container">
+		<h3 class="heading text-center mb-4">Latest <span>News Blog</span></h3>
+		<div class="inner-sec-w3ls py-md-5 py-4">
+			<!--/services-grids-->
+			<div class="row blog-sec">
+				<div class="col-lg-4 col-md-6 about-in blog-grid-info text-left">
+					<div class="card img">
+						<div class="card-body img">
+							<img src="images/blog.jpg" alt="" class="img-fluid">
+							<div class="blog-des mt-3">
+								<span class="entry-date"><span class="fa fa-clock-o" aria-hidden="true"></span> 8th Dec, 2018 <span class=" ml-4 fa fa-user" aria-hidden="true"></span> John Watson</span>
+								<h5 class="card-title mt-2"><a href="#">Boating trip in a beach</a></h5>
+								<p class="card-text">Nulla eu elementum quam. Pellentesque consectetur magna purus, nec facilisis.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 about-in blog-grid-info text-left mt-md-0 mt-5">
+					<div class="card img">
+						<div class="card-body img">
+							<img src="images/blog1.jpg" alt="" class="img-fluid">
+							<div class="blog-des mt-3">
+								<span class="entry-date"><span class="fa fa-clock-o" aria-hidden="true"></span> 8th Dec, 2018 <span class=" ml-4 fa fa-user" aria-hidden="true"></span> John Watson</span>
+								<h5 class="card-title mt-2"><a href="#">Vacational Happy trip</a></h5>
+								<p class="card-text">Nulla eu elementum quam. Pellentesque consectetur magna purus, nec facilisis.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 about-in blog-grid-info text-left mt-lg-0 mt-5">
+					<div class="card img">
+						<div class="card-body img">
+							<img src="images/blog2.jpg" alt="" class="img-fluid">
+							<div class="blog-des mt-3">
+								<span class="entry-date"><span class="fa fa-clock-o" aria-hidden="true"></span> 8th Dec, 2018 <span class=" ml-4 fa fa-user" aria-hidden="true"></span> John Watson</span>
+								<h5 class="card-title mt-2"><a href="#">Holiday trip to mountains</a></h5>
+								<p class="card-text">Nulla eu elementum quam. Pellentesque consectetur magna purus, nec facilisis.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--//Blog-Posts-->
+
+<!-- Book -->
+<section class="book py-5" id="book">
+	<div class="container py-md-5">
+		<div class="row">
+			<div class="col-lg-8">
+				<h4 class="heading">您想去吗?</h4>
+				<p class="mt-4"> 5秒提交旅行，10分钟旅行顾问1对1沟通，12小时私属行程方案发送到手机</p>
+				<form action="#" method="post" class="d-sm-flex mt-sm-5 mt-3">  
+					<input type="text" name="Name" placeholder="您的姓名" required="">
+					<input type="text" name="Phone no" class="mx-sm-2 my-sm-0 my-2" placeholder="电话号码" required="">
+					<button type="submit" class="btn"> 提交</button>
+				</form>
+			</div>
+			<div class="col-lg-4">
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //Book -->
+
+<!-- contact -->		
+<section class="contact py-5" id="contact">
+	<div class="container py-md-3">
+		<h3 class="heading text-center mb-4">联系我们</h3>
+		<div class="row contact-w3layouts">
+			<div class="col-lg-5 contact-right"> 
+				<form action="#" method="post">  
+					<input type="text" name="Name" placeholder="填写您的姓名" required="">
+					<input type="email" class="email" name="Email" placeholder="填写您的电子邮箱" required="">
+					<input type="text" name="Phone no" placeholder="填写您的电话" required="">
+					<textarea name="Message" placeholder="添加您的信息" required=""></textarea>
+					<button class="btn submit">提交 </button>
+				</form>
+			</div>
+			<div class="col-lg-7 contact-middle mt-lg-0 mt-4">
+				<div class="location-w3layouts-map">
+					<iframe src="" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //contact -->	
+
+<!-- footer -->
+<section class="footer-top pt-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 mt-lg-0 mt-3 footer" id="subscribe">
+				<div class="icon-subscribe">
+					<h3><span class="fa fa-paper-plane" aria-hidden="true"></span> 加入我们实时联系</h3>
+					<p>获取我们最新的消息和特别优惠</p>
+				</div>
+			</div>
+			<div class="col-lg-7 mt-lg-0 mt-4">
+				<form action="#" method="post">
+					<input type="email" placeholder="输入您的电子邮箱..." name="email" required="">
+					<button type="submit" class="btn">提交</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="w3pvt-footer middle w3ls-section">
+	
+	<div class="container">
+		<div class="w3layouts-footer-bottom position-relative">
+			<div class="row w3_layouts-footer-grids py-5">
+				<div class="col-lg-3 col-md-5 mb-sm-0 mb-4 w3_layout-footer1 f1">
+					<h5 class="mb-3">我们是谁</h5>
+					<h6>10年以上工作经验</h6>
+					<p class="mt-2">Integer pulvinar leots idut viver sed feugiat. Pellentesque libero justo orcis fermentum sit amet consec adipiscing. Ipsum dolor sit amet idut viver sed.</p>					
+				</div>
+				<div class="col-lg-5 col-md-7 row w3_layout-footer1 f2 mt-md-0 mt-4">
+					
+					<div class="col-lg-7 col-md-7 col-sm-6 mb-sm-0 mb-4 inner-li">
+						<h5 class="mb-3">Address Info</h5>
+						<ul class="w3ls-footer-bottom-list">
+							<li> <span class="fa fa-map-marker"></span> 3481ID Jack Street Beverly Jack<span> Hills 90210, USA </span></li>
+							<li> <span class="fa fa-envelope"></span> <a href="mailto:name@example.com"> mail@example.com</a> </li>
+							<li> <span class="fa fa-phone"></span> +112 367 896 2449 </li>
+							<!-- <li> <span class="fas fa-globe"></span> <a href="#"> www.website.com</a> </li> -->
+							<li> <span class="fa fa-clock-o"></span>  8:00 a.m - 6:00 p.m</li>
+						</ul>
+					</div>
+					<div class="col-lg-5 col-md-5 col-sm-6 inner-li">
+						<h5 class="mb-3">Useful Links </h5>
+							<ul class="w3ls-footer-bottom-list">
+							<li><a href="about.html">About our company</a></li>
+							<li><a href="#">What we do</a></li>
+							<li><a href="projects.html">Best travel places</a></li>
+							<li><a href="#">Team members</a></li>
+							<li><a href="contact.html">Write to us</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12 w3_layout-footer1 f3 mt-lg-0 mt-4">
+					<h5 class="mb-3">Latest Tweets</h5>
+					<ul class="tweet-w3pvt">
+						<li>
+							<p class="tweet-p1"><span class="fa fa-twitter" aria-hidden="true"></span><a href="mailto:support@company.com">@example</a> sit amet libero consectetur sed adipiscing libero justo orci sit amet.</p>
+							<p class="tweet-p2">Posted 2 days ago.</p>
+						</li>
+						<li>
+							<p class="tweet-p1"><span class="fa fa-twitter" aria-hidden="true"></span><a href="mailto:support@company.com">@example</a> sit amet libero consectetur sed adipiscing libero justo orci sit amet.</p>
+							<p class="tweet-p2">Posted 4 days ago.</p>
+						</li>
+					</ul>
+				</div>
+				<a href="#home" class="move-top text-center"><span class="fa fa-angle-double-up" aria-hidden="true"></span></a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="copyright py-4">
+	<div class="w3layouts-copyright text-center">
+		<p>Copyright &copy; 2019.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+	</div>
+</section>
+<!-- //footer -->
+
+<style>
+
+	/* about文字 */
+
+	/* 人物介绍 */
+	/* .person{
+		transition: all 2s;
+	}
+	.person.person1 */
+</style>
+<script>
+	$(document).scroll(function () { 
+		// $('.animation').removeClass('animation')
+		// $(document).scrollTop()
+		// window.innerHeight
+		// if ($('.animation').eq(0).offset().top < ($(document).scrollTop() + window.innerHeight)) {
+		// 	// alert('滚动到了')
+		// 	// $('.animation').eq(0).removeClass('animation')
+		// }
+		$('.animation').each(function (index, element) {
+			// console.log(element);
+			
+			if ($(element).offset().top < ($(document).scrollTop() + window.innerHeight - 50)) {
+				console.log('1');
+				$(element).removeClass('animation').removeClass('allOpacity allOpacity')
+		}
+		
+		})
+		if ($('.AboutImg-rightInto').offset().top < ($(document).scrollTop() + window.innerHeight - 80)) {
+				console.log('2');
+				$('.AboutImg-rightInto').removeClass('AboutImg-rightInto allOpacity')	
+				$('.AboutImg-leftText.AboutImg-leftText1').removeClass('AboutImg-leftText1 allOpacity')
+				$('.AboutImg-leftText.AboutImg-leftText2').removeClass('AboutImg-leftText2 allOpacity')
+				$('.AboutImg-leftText.AboutImg-leftText3').removeClass('AboutImg-leftText3 allOpacity')
+				$('.AboutImg-leftText.AboutImg-leftText4').removeClass('AboutImg-leftText4 allOpacity')	
+		}
+		
+	});
+
+</script>
+</body>
+</html>
