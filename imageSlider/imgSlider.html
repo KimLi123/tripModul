@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            .oldImg{
+                width: 500px;
+                height: 500px;
+                background: url('./img/old.jpg') no-repeat;
+                background-size:auto 100%;
+                position: relative;
+            }
+            .newImg{
+                width:50%;
+                height: 100%;
+                background: url('./img/new.jpg') no-repeat;
+                background-size:auto 100%;
+                position: relative;
+            }
+            #rangeImg{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                opacity: 0;
+               
+            }
+            span{
+                display: block;
+                background-color: #fff;
+                opacity:0.5;
+                width: 20px;
+                height: 20px;
+                border-radius: 50px;
+                position: absolute;
+                top: 50%;
+                right: -10px;
+
+            }
+        </style>
+</head>
+
+<body>
+    <div class="oldImg">
+        <div class="newImg"> <span></span></div>
+        <input type="range" id="rangeImg" min="0" max="100" step="1" value="50">
+       
+    </div>
+   
+</body>
+<script>
+    var newImg = document.querySelector('.newImg')
+    var rangeImg = document.getElementById('rangeImg')
+    rangeImg.oninput = function(){
+        console.log(this.value)
+        newImg.style.width = this.value + '%'
+    }
+</script>
+</html>

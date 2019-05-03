@@ -1,0 +1,135 @@
+.header>.phone{
+    line-height: 60px;
+    color: #FF8040;
+}
+.my-theme{
+    font-size: 3em;
+}
+.my-theme>strong{
+    color: #5BBBFE;
+}
+.my-search{
+    color: black;
+    margin-top: 1.6em;
+}
+
+.my-search>.search-logo{
+    color: #FF8547;
+    font-size: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.my-search> input{
+    border: 0;
+    border-bottom: 1px solid #999999;
+    outline: none;
+}
+
+.my-down {
+    background:#525252;
+       
+}
+.my-down>li>a{
+    color: white;
+}
+
+.myTitle{
+    /* position: absolute;
+    top:50%;
+    left: 50%; */
+    /* z-index: 2; */
+    float: left;
+    background: #525252;
+}
+.title span{
+    color: #FF8040;
+}
+/* .title>h1{
+    font-size: 45px;
+    padding: 20px 0;
+} */
+.my-textstyle>h2{
+    margin-top: 0;
+    color: #FF8547;
+}
+.my-textstyle p{
+    line-height: 2.5em;
+    color: #7B7A7A;
+}
+
+.my-textstyle>button{
+    color: #5BBBFE;
+    border:1px solid #5BBBFE;
+    border-radius: 0;
+    
+}
+
+.my-textstyle>button:hover{
+    background-color: white;
+    color: #FF8547;
+    border:1px solid #FF8547;
+}
+
+.spruce{
+    margin-top: 50px;
+    padding: 0;
+}
+
+.my-padding{
+    padding: 0;
+    
+}
+
+.big-h1{
+    font-size: 3em;
+    padding:0;
+    margin: 0;
+    font-style: italic;
+    color: white;
+    text-align: center;
+
+   
+}
+
+.leftBack{
+    position: relative;
+    overflow: hidden;
+}
+
+.rightBack{
+    position: relative;
+    overflow: hidden;
+}
+
+.first-h1{
+   background-color:  #5BBBFE;
+   position: absolute;
+   height: 100%;
+  
+  
+}
+
+/* .asd{
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+} */
+
+.second-h1{
+    
+    background-color:  #FF8547;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    
+}
+
+.foot{
+    clear: both;
+    padding-top: 25px;
+}
+
+
+

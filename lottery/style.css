@@ -1,0 +1,18 @@
+.box{
+	width: 650px;
+	height: 600px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.turntable{
+	position: absolute;
+	left:122px;
+	top: 60px;
+}
+
+.pointer{
+	position: absolute;
+	left: 267px;
+	top: 160px;
+}

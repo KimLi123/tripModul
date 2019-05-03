@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .stage {
+            width: 300px;
+            height: 300px;
+            float: left;
+            display: flex;
+            border-radius: 50%;
+            position: relative;      
+        }
+
+        .stage::before {
+            position: absolute;
+            content: '';
+            background: red;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border-bottom: 15px solid #ECAB18;
+            border-left: 15px solid #ECAB18;
+            border-top: 15px solid #1AD280;
+            border-right: 15px solid #1AD280;
+            transition: all 1s;
+        }
+
+        img {
+            width: auto;
+            display: block;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .picture{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+        .textBox {
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            color: white;
+            background: black;
+            text-align: center;
+            position: absolute;
+            left: 315px;
+            top: 15px;
+            opacity: 0;
+            transition: all 1s;
+            display: flex;
+            z-index: 3;
+        }
+
+        .smallBox {
+            height: 30%;
+            align-self: center;
+            flex-grow: 1;
+        }
+
+        .stage:hover .textBox {
+            width: 100%;
+            transform: translateX(-300px);
+            opacity: 0.8;
+
+        }
+        .stage:hover:before{
+           
+            transform: rotate(90deg);
+        }
+      
+       
+    </style>
+</head>
+
+<body>
+    <div class="stage">
+        <div class="picture">
+            <img src="./img/./2.jpg" alt="">
+        </div>
+        <div class="textBox">
+            <div class="smallBox">
+                <h3>Heading here</h3>
+                <hr>
+                <p>Description goes here</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

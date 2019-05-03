@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" type="font-" href=""/>
+	</head>
+
+	<body>
+		<i class="fa fa-address-book" aria-hidden="true"></i>
+		<div class="box">
+			<img class="bgimg" src="img/lottery-turntable-bg.jpg" />
+			<img class="turntable" src="img/lottery-turntable.png" />
+			<img class="pointer" src="img/lottery-pointer.png" />
+		</div>
+	</body>
+	<script type="text/javascript">
+		var pointer = document.getElementsByClassName('pointer')[0]
+		var turntable = document.getElementsByClassName('turntable')[0]
+		var randomNum
+		var test
+		var nub
+		var judge = true
+		var deg
+
+		function rdn() {
+			randomNum = Math.floor(Math.random() * 100)
+			return randomNum
+		}
+
+		function MatchingNumber(r) {
+			if(r == 0) {
+				test = '妈耶中了一等奖'
+				nub = 1
+			} else if(r < 5) {
+				test = '恭喜你二等奖'
+				nub = 2
+			} else if(r < 12) {
+				test = '三等奖也不错'
+				nub = 3
+			} else if(r < 19) {
+				test = '四等奖勉强把'
+				nub = 4
+			} else if(r < 27) {
+				test = '五等奖一般般'
+				nub = 5
+			} else if(r < 36) {
+				test = '六等奖看不下去 '
+				nub = 6
+			} else {
+				test = '没中，哈哈哈哈'
+				nub = 7
+			}
+		}
+
+		function Degrees(c) {
+			turntable.style.transform = 'rotate(' + (32 + (360 / 7) * (c - 1) + 1080) + 'deg)'
+			turntable.style.transition = 'all 3s'
+		}
+
+		pointer.onclick = function() {
+			if(judge == true) {
+				MatchingNumber(rdn())
+				console.log(nub + '|' + test)
+				Degrees(nub)
+				setTimeout(function() {
+					turntable.style.transition = 'all 0s'
+//					turntable.style.transform = 'rotate(0deg)'
+					turntable.style.transform = 'rotate(' + (32 + (360 / 7) * (nub - 1) - 1080) + 'deg)'
+					judge = true
+					alert(test)
+				}, 3000)
+			}
+			judge = false
+		}
+	</script>
+
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			background-color: #1E1E1E;
+			
+		
+			 /* background: linear-gradient(to bottom, #1967D2,#5C7113, #3E4C2D); */
+		}
+
+		#stage {
+			width: 580px;
+			height: 450px;
+			background: url(px2.jpg);
+			background-size: 100% 100%;
+			/* border: 1px solid red; */
+			/* background-position: top;
+				background-attachment: fixed; */
+			margin: 0 auto;
+			position: relative;
+		}
+
+		#stage i {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+		}
+
+		p {
+			display: inline-block;
+			/* float: left; */
+			margin: 0 auto;
+			width: 100px;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+			background-color: #5F816E;
+			color: white;
+			
+			margin: 0;
+			/* border-radius: 10%; */
+		}
+
+		.btn {
+			display: inline-block;
+			background: #e1e1e1;
+			width: 100px;
+			text-align: center;
+			line-height: 50px;
+			color: black;
+			position: relative;
+			z-index: 2;
+			
+		}
+
+		.btn:hover {
+			color: white;
+		}
+
+		.btn1 i {
+			width: 100%;
+			height: 25px;
+			display: block;
+			background: #2098D1;
+			transition: all 0.5s;
+			position: absolute;
+			transform: rotateX(90deg);
+			transform-origin: right top;
+			z-index: -1;
+
+		}
+
+		.btn1:hover .my-i1 {
+			transform: rotateX(0deg);
+
+		}
+
+		.btn1:hover .my-i2 {
+			transform: rotateX(180deg);
+		}
+
+		#music1,
+		#music2,
+		#music3 {
+			display: none;
+		}
+		.foot{
+			width: 580px;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+
+<body>
+	<video src="bgMusic.mp3" id="music1"></video>
+	<video src="food.mp3" id="music3"></video>
+	<video src="walk.mp3" id="music2"></video>
+	
+	<div id="stage">
+
+	</div>
+
+	<!-- <button id="start" onclick="RUN()">开始</button> -->
+	<div class="foot">
+	<p class="score">0</p>
+	<div class="btn1 btn" id="start" onclick="RUN()">
+		<i class="my-i1"></i>
+		开始
+		<i class="my-i2"></i>
+	</div>
+</div>
+
+</body>
+<script type="text/javascript">
+	var stage = document.getElementById('stage')
+	var score = 0
+	var oScore = document.querySelector('.score')
+	var btn = document.querySelector('#start')
+	//把这个stage分成很多份小格子，方便蛇的一格一格移动
+	//先获取css样式里面的元素宽高，把它分成10个像素等于一格,就等于宽58份，高45份
+	//lattice  格状的
+	var latticeWidth = parseInt(window.getComputedStyle(stage).width) / 10
+	var latticeHeight = parseInt(window.getComputedStyle(stage).height) / 10
+	var gameOver = false
+	var music1 = document.querySelector('#music1')
+	var music2 = document.querySelector('#music2')
+	var music3 = document.querySelector('#music3')
+	//定义一个格子的初始位置
+	//initial 初始位置
+	//这是一个构造函数
+	var item = true
+
+
+	function RUN() {
+
+		if (item === true) {
+			score = 0
+			oScore.innerText = score
+			item = false
+			// 清除所有蛇
+			var allChildCount = stage.childElementCount
+			for (var i = 0; i < allChildCount; i++) {
+				stage.removeChild(stage.children[0])
+			}
+			// 播放音频
+			
+			music1.play()
+			var Initial = function (col, row) {
+				this.col = col
+				this.row = row
+			}
+
+			//给格子添加一个蛇头的
+			Initial.prototype.drow = function (color) {
+				if (this.Node) {
+					// 每次画点的时候 都先把原来旧的 dom节点 先删掉
+					stage.removeChild(this.Node)
+				}
+				this.Node = document.createElement('i')
+				this.Node.style.width = '10px'
+				this.Node.style.height = '10px'
+				this.Node.style.borderRadius = '50%'
+				this.Node.style.background = color
+				//在stage里面把i元素添加进去			
+				//计算i的位置
+				this.Node.style.left = this.col * 10 + 'px'
+				this.Node.style.top = this.row * 10 + 'px'
+				stage.appendChild(this.Node)
+			}
+
+			//=======蛇==================================================
+			//蛇身和蛇头
+			var Snake = function () {
+				//蛇的身子,给蛇一个数组，方便把蛇头的每个值都带进去，当然也可以改变蛇头的颜色
+				this.segements = [
+					new Initial(2, 0),
+					new Initial(1, 0),
+					new Initial(0, 0)
+				]
+				this.direction = 'right'
+				this.nextDirection = 'right'
+			}
+
+			//遍历snake的颜色
+			Snake.prototype.snakeClor = function () {
+				this.segements.forEach(function (element, index) {
+
+					if (index === 0) {
+						element.drow('#FFEF61')
+					} else {
+						element.drow('#FCD200')
+					}
+				})
+			}
+
+			Snake.prototype.move = function () {
+				this.newHead
+				this.direction = this.nextDirection
+				var head = this.segements[0]
+				//			var newHead = new Initial(head.col + 1, head.row)
+				switch (this.direction) {
+					case 'right':
+						this.newHead = new Initial(head.col + 1, head.row)
+						break
+					case 'left':
+						this.newHead = new Initial(head.col - 1, head.row)
+						break
+					case 'up':
+						this.newHead = new Initial(head.col, head.row - 1)
+						break
+					case 'down':
+						this.newHead = new Initial(head.col, head.row + 1)
+						break
+				}
+				//给蛇头添加
+				this.segements.unshift(this.newHead)
+
+				//						stage.removeChild(tail.Node)
+
+				//判断蛇吃到苹果，苹果就会消失，随机出现在其他地方
+				if (this.newHead.col === apple.fool.col && this.newHead.row === apple.fool.row) {
+					music3.play()
+					apple.move()
+					apple.foolColor()
+				} else {
+					//吃到苹果后，删掉尾巴，加蛇头
+					var tail = this.segements.pop()
+					stage.removeChild(tail.Node)
+				}
+			}
+
+			Snake.prototype.chheckCollision = function () {
+				var selfCollision = false
+				var rightCollision = this.segements[0].col > latticeWidth - 1
+				var leftCollision = this.segements[0].col < 0
+				var topCollision = this.segements[0].row > latticeHeight - 1
+				var upCollision = this.segements[0].row < 0
+				for (var i = 1; i < this.segements.length; i++) {
+					if (this.newHead.col === this.segements[i].col && this.newHead.row === this.segements[i].row) {
+						console.log('1')
+						selfCollision = true
+					}
+				}
+				if (rightCollision || leftCollision || topCollision || upCollision || selfCollision) {
+
+					clearInterval(times)
+					// 撞墙音频，更改音频时间，停止音乐
+					music2.play()
+					music1.currentTime=0
+					music1.pause()
+					// console.log(music1.currentTime);
+					
+					alert('game over')
+
+					item = true
+
+
+				}
+			}
+
+			Snake.prototype.setDirection = function (newDirection) {
+				if (this.direction === 'left' && newDirection === 'right') {
+					return
+				}
+				if (this.direction === 'up' && newDirection === 'down') {
+					return
+				}
+				if (this.direction === 'right' && newDirection === 'left') {
+					return
+				}
+				if (this.direction === 'down' && newDirection === 'up') {
+					return
+				}
+				this.nextDirection = newDirection
+			}
+
+			//实例化
+			var Snake = new Snake()
+			Snake.snakeClor()
+
+			var directions = {
+				37: 'left',
+				38: 'up',
+				39: 'right',
+				40: 'down'
+			}
+
+			window.onkeydown = function (e) {
+				console.log(directions[e.keyCode])
+				if (directions[e.keyCode]) {
+					Snake.setDirection(directions[e.keyCode])
+				}
+			}
+			//=========食物================================
+			//赋予食物随机出现函数
+			var foolRandom = function (params) {
+				return Math.floor(Math.random() * params)
+			}
+
+			var Apple = function () {
+				this.fool = new Initial(10, 0)
+			}
+			Apple.prototype.foolColor = function () {
+				//引用Initial里面的drow
+				this.fool.drow('red')
+				this.fool.Node.style.borderRadius = '50%'
+			}
+			//给Apple添加移动函数
+			Apple.prototype.move = function () {
+				var randomCol
+				var randomRow
+
+				do {
+					var needReGenerate = false
+					randomCol = foolRandom(latticeWidth)
+					randomRow = foolRandom(latticeHeight)
+
+					Snake.segements.forEach(function (element) {
+						if (element.col === randomCol && element.row === randomRow) {
+							needReGenerate = true
+						}
+
+					})
+				} while (needReGenerate)
+				stage.removeChild(this.fool.Node)
+				this.fool = new Initial(randomCol, randomRow)
+				console.log(this.fool)
+				score++
+				oScore.innerText = score
+			}
+			//实例化
+			var apple = new Apple()
+			apple.foolColor()
+
+			//Snake.drow('red')
+			//给格子赋值
+			//		var initialPar = new Initial(2, 0)
+			//把i元素里面东西显示出来
+			//initialPar.drow('red')
+
+			var times = setInterval(function () {
+				music1.play()
+				Snake.move()
+				Snake.snakeClor()
+				Snake.chheckCollision()
+			}, 100)
+		}
+	}
+</script>
+
+</html>

@@ -1,0 +1,81 @@
+.banner{
+    background: url('./img/1.jpg') no-repeat;
+    width: 100%;
+    height: 900px;
+   
+}
+.navigation{
+    overflow: hidden;
+}
+.nav-left{
+    color: #FFAE00;
+    font-size: 50px;
+}
+
+.tree{
+    color: #B2D905;
+}
+
+.nav-center{
+    line-height:100px;
+}
+
+.nav-center > a{
+    padding-left: 10px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.nav-right{
+    color: #fff;
+    font-size: 1.5em;
+    line-height:100px;
+}
+
+.neck-hr{
+    width: 100px;
+    height: 1px;
+    background-color: #FFAE00;
+}
+
+.body-right{
+    height: 297px;
+    background: url('./img/s1.jpg') no-repeat;
+    background-size: cover;
+
+}
+
+.center-block>.col-md-8>p{
+    margin-top: 10px;
+}
+
+.abdomen{
+    height: 297px;
+    background: url('./img/s2.jpg') no-repeat;
+    background-size: cover;
+}
+.leg{
+    height: 551px;
+    background: url('./img/s5.jpg') no-repeat;
+    background-size: cover;
+}
+
+.figger>div{
+    float: left;
+}
+.figger>div> span{
+    font-size: 30px;
+    padding: 50px;
+
+}
+.figger>div>strong{
+    display: block;
+}
+
+.bgimg-4{
+    min-height: 400px;
+    background: url('./img/s4.jpg') no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin-top: 40px;
+}
